@@ -9,7 +9,7 @@ from app.agents import (
 from app.email_service import send_email
 from app.excel_service import save_jobs_to_excel
 
-st.set_page_config(page_title="AI Job Hunter", layout="wide")
+st.set_page_config(page_title="AI Job Hunter by Atharva", layout="wide")
 
 st.title("🤖 Autonomous AI Job Hunter")
 st.markdown("Search → Filter → Generate Email → Apply")
