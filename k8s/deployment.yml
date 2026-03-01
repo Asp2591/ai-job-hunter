@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: job-hunter
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: job-hunter
+  template:
+    metadata:
+      labels:
+        app: job-hunter
+    spec:
+      containers:
+      - name: job-hunter
+        image: ACCOUNT_ID.dkr.ecr.ap-south-1.amazonaws.com/job-hunter:latest
+        ports:
+        - containerPort: 8501
+        env:
+        - name: EMAIL_ADDRESS
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: email
+        - name: EMAIL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: password

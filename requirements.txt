@@ -1,0 +1,7 @@
+google-genai
+google-search-results
+python-dotenv
+pandas
+openpyxl
+streamlit
+serpapi
