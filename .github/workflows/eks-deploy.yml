@@ -8,7 +8,7 @@ on:
 env:
   AWS_REGION: ap-south-1
   EKS_CLUSTER: job-hunter-cluster
-  ECR_REPOSITORY: job-hunter
+  ECR_REPOSITORY: aiapply/job-hunter
 
 jobs:
   deploy:
